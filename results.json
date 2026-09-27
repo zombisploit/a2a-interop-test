@@ -1,0 +1,326 @@
+{
+  "slug": "toolbox",
+  "base": "https://ferminux.net",
+  "timestamp": "2026-09-27T07:24:03Z",
+  "agent_card_summary": {
+    "name": "Toolbox",
+    "url": "https://ferminux.net/a/toolbox/a2a",
+    "version": "1.0.0",
+    "auth_schemes": [
+      "x402-ferminux"
+    ],
+    "skills": [
+      "hash",
+      "encode",
+      "json",
+      "timestamp",
+      "text-stats"
+    ]
+  },
+  "checks": [
+    {
+      "name": "agent_card",
+      "ok": true,
+      "detail": "name='Toolbox' url='https://ferminux.net/a/toolbox/a2a' schemes=['x402-ferminux']",
+      "data": {
+        "name": "Toolbox",
+        "description": "Deterministic utility agent: keccak256/sha256 hashing, base64, JSON validation and pretty-print, timestamp conversion, text stats. Input: text, or JSON {\"op\":\"keccak256|sha256|base64|base64decode|json|timestamp|stats|uppercase|lowercase\",\"text\":\"...\"}.",
+        "url": "https://ferminux.net/a/toolbox/a2a",
+        "version": "1.0.0",
+        "provider": {
+          "organization": "Toolbox",
+          "url": "https://ferminux.net/agents/?id=1"
+        },
+        "documentationUrl": "https://ferminux.net/agents/?id=1",
+        "iconUrl": "https://ferminux.net/assets/brand/fmx-256.png",
+        "capabilities": {
+          "streaming": false,
+          "pushNotifications": true,
+          "stateTransitionHistory": false
+        },
+        "defaultInputModes": [
+          "text/plain",
+          "application/json"
+        ],
+        "defaultOutputModes": [
+          "application/json"
+        ],
+        "skills": [
+          {
+            "id": "hash",
+            "name": "hash",
+            "description": "Toolbox: hash",
+            "tags": [
+              "ferminux",
+              "x402"
+            ],
+            "inputModes": [
+              "text/plain",
+              "application/json"
+            ],
+            "outputModes": [
+              "application/json"
+            ]
+          },
+          {
+            "id": "encode",
+            "name": "encode",
+            "description": "Toolbox: encode",
+            "tags": [
+              "ferminux",
+              "x402"
+            ],
+            "inputModes": [
+              "text/plain",
+              "application/json"
+            ],
+            "outputModes": [
+              "application/json"
+            ]
+          },
+          {
+            "id": "json",
+            "name": "json",
+            "description": "Toolbox: json",
+            "tags": [
+              "ferminux",
+              "x402"
+            ],
+            "inputModes": [
+              "text/plain",
+              "application/json"
+            ],
+            "outputModes": [
+              "application/json"
+            ]
+          },
+          {
+            "id": "timestamp",
+            "name": "timestamp",
+            "description": "Toolbox: timestamp",
+            "tags": [
+              "ferminux",
+              "x402"
+            ],
+            "inputModes": [
+              "text/plain",
+              "application/json"
+            ],
+            "outputModes": [
+              "application/json"
+            ]
+          },
+          {
+            "id": "text-stats",
+            "name": "text-stats",
+            "description": "Toolbox: text-stats",
+            "tags": [
+              "ferminux",
+              "x402"
+            ],
+            "inputModes": [
+              "text/plain",
+              "application/json"
+            ],
+            "outputModes": [
+              "application/json"
+            ]
+          }
+        ],
+        "authentication": {
+          "schemes": [
+            "x402-ferminux"
+          ],
+          "credentials": "PAYMENT header: EIP-712 FerminuxX402 voucher of 10000000000000000 wei to 0x4660E707371db34E8229A66b1e141053F61b2AD4 (see https://ferminux.net/api/x402/supported)"
+        },
+        "securitySchemes": {
+          "x402-ferminux": {
+            "type": "http",
+            "scheme": "x402",
+            "description": "402 \u2192 PAYMENT-REQUIRED (scheme ferminux-voucher, network ferminux:3961, asset FMX)"
+          }
+        },
+        "security": [
+          {
+            "x402-ferminux": []
+          }
+        ],
+        "ferminux": {
+          "agentId": 1,
+          "owner": "0x4660E707371db34E8229A66b1e141053F61b2AD4",
+          "endpoint": "https://ferminux.net/a/toolbox",
+          "pricePerJob": "100000000000000000",
+          "pricePerCall": "10000000000000000",
+          "invoke": "https://ferminux.net/a/toolbox/invoke",
+          "erc8004": "https://ferminux.net/api/agents/1/erc8004.json",
+          "agent": "https://ferminux.net/api/agents/1",
+          "online": true,
+          "gateway": "0.6.0"
+        }
+      },
+      "duration_ms": 293.9815940000017
+    },
+    {
+      "name": "x402_paid_path",
+      "ok": true,
+      "detail": "status=402 payment-required signal present; accepts=[{'scheme': 'ferminux-voucher', 'network': 'ferminux:3961', 'asset': 'FMX', 'payTo': '0x4660E707371db34E8229A66b1e141053F61b2AD4', 'maxAmountRequired': '10000000000000000', 'resource': 'https://ferminux.net/a/toolbox/a2a', 'description': 'A2A tasks/send to Ferminux agent #1 Toolbox', 'mimeType': 'application/json', 'maxTimeoutSeconds': 300, 'extra': {'vault': '0x8751Cf7e29Fe588c61FDc53323438247198eaa57', 'nonceHint': 1790493844567384, 'settlement': 'facilitator'}}]",
+      "data": {
+        "x402Version": 1,
+        "accepts": [
+          {
+            "scheme": "ferminux-voucher",
+            "network": "ferminux:3961",
+            "asset": "FMX",
+            "payTo": "0x4660E707371db34E8229A66b1e141053F61b2AD4",
+            "maxAmountRequired": "10000000000000000",
+            "resource": "https://ferminux.net/a/toolbox/a2a",
+            "description": "A2A tasks/send to Ferminux agent #1 Toolbox",
+            "mimeType": "application/json",
+            "maxTimeoutSeconds": 300,
+            "extra": {
+              "vault": "0x8751Cf7e29Fe588c61FDc53323438247198eaa57",
+              "nonceHint": 1790493844567384,
+              "settlement": "facilitator"
+            }
+          }
+        ]
+      },
+      "duration_ms": 83.95701899996766
+    },
+    {
+      "name": "prefunded_escrow_path",
+      "ok": true,
+      "detail": "status=200 prefunded=True jobId=1 jobStatus=3",
+      "data": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "id": "task-mujht0h8",
+          "sessionId": null,
+          "status": {
+            "state": "completed",
+            "timestamp": "2026-09-27T07:24:04.652Z"
+          },
+          "artifacts": [
+            {
+              "name": "output",
+              "parts": [
+                {
+                  "type": "data",
+                  "data": {
+                    "ok": true,
+                    "op": "stats",
+                    "output": {
+                      "chars": 42,
+                      "words": 2,
+                      "lines": 1,
+                      "bytes": 42
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "history": [
+            {
+              "role": "user",
+              "parts": [
+                {
+                  "kind": "text",
+                  "text": "{\"op\":\"sha256\",\"text\":\"interop-test\"}"
+                }
+              ],
+              "messageId": "ab73c7fd-e93c-4a8c-a9de-7df7dd021711"
+            }
+          ],
+          "metadata": {
+            "agentId": 1,
+            "jobId": 1,
+            "jobStatus": 3,
+            "prefunded": true
+          }
+        }
+      },
+      "duration_ms": 99.17204599992147
+    },
+    {
+      "name": "method_aliases",
+      "ok": true,
+      "detail": "{\n  \"message/send\": {\n    \"status\": 402,\n    \"payment_required\": true,\n    \"has_result\": false,\n    \"has_error\": false\n  },\n  \"SendMessage\": {\n    \"status\": 200,\n    \"payment_required\": false,\n    \"has_result\": false,\n    \"has_error\": true\n  },\n  \"tasks/send\": {\n    \"status\": 402,\n    \"payment_required\": true,\n    \"has_result\": false,\n    \"has_error\": false\n  }\n}",
+      "data": {
+        "message/send": {
+          "status": 402,
+          "payment_required": true,
+          "has_result": false,
+          "has_error": false
+        },
+        "SendMessage": {
+          "status": 200,
+          "payment_required": false,
+          "has_result": false,
+          "has_error": true
+        },
+        "tasks/send": {
+          "status": 402,
+          "payment_required": true,
+          "has_result": false,
+          "has_error": false
+        }
+      },
+      "duration_ms": 0.0
+    }
+  ],
+  "libraries": [
+    {
+      "name": "a2a-sdk (Python official)",
+      "importable": true,
+      "version": "1.1.5",
+      "works_unchanged_for_x402": false,
+      "works_with_jobId_metadata": true,
+      "notes": "Inject metadata.jobId or add x402 PAYMENT header middleware. Agent Card path on Ferminux is /.well-known/agent.json. Message type is available; pass metadata via SendMessageRequest params."
+    },
+    {
+      "name": "raw HTTP (requests/httpx)",
+      "importable": true,
+      "works_unchanged_for_x402": true,
+      "works_with_jobId_metadata": true,
+      "notes": "Fully interoperable. This suite is the reference."
+    },
+    {
+      "name": "@a2a-js/sdk",
+      "importable": "n/a (JS)",
+      "works_unchanged_for_x402": false,
+      "works_with_jobId_metadata": true,
+      "notes": "Same pattern as Python: pass metadata.jobId or handle 402 + x402 voucher. Agent Card path is /.well-known/agent.json."
+    },
+    {
+      "name": "a2a-go",
+      "importable": "n/a",
+      "works_unchanged_for_x402": false,
+      "works_with_jobId_metadata": "expected yes (metadata map)",
+      "notes": "Any client that can set arbitrary params.metadata will support the pre-funded path. x402 requires a PAYMENT header / EIP-712 voucher."
+    },
+    {
+      "name": "a2a-java",
+      "importable": "n/a",
+      "works_unchanged_for_x402": false,
+      "works_with_jobId_metadata": "expected yes (metadata map)",
+      "notes": "Any client that can set arbitrary params.metadata will support the pre-funded path. x402 requires a PAYMENT header / EIP-712 voucher."
+    },
+    {
+      "name": "a2a-rs",
+      "importable": "n/a",
+      "works_unchanged_for_x402": false,
+      "works_with_jobId_metadata": "expected yes (metadata map)",
+      "notes": "Any client that can set arbitrary params.metadata will support the pre-funded path. x402 requires a PAYMENT header / EIP-712 voucher."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 4,
+    "all_ok": true,
+    "x402_path_ok": true,
+    "prefunded_path_ok": true,
+    "agent_card_ok": true
+  }
+}
